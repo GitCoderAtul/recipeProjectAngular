@@ -1,0 +1,30 @@
+<div class="container">
+        <div class="row">
+
+<div class="col-md-12">
+<ol>
+    <li>Add a Input field which updates a property ('userName') via Two-Way-Binding</li>
+    <li>Output the username property via string interpolation (in a paragraph below the input) </li>
+    <li>Add a button which may only be clicked if the username is NOT an empty string</li>
+    <li>Upon clicking the button, the username should be reset to an empty string</li>
+</ol>
+<hr>
+<label>User Name</label>
+<input type="text" class="form-control" [(ngModel)]="username">
+<label>Age</label>
+<input type="text" class="form-control" [(ngModel)]="age">
+<label>Salary</label>
+<input type="text" class="form-control" [(ngModel)]="salary">
+<label>Technology</label>
+<input type="text" class="form-control" [(ngModel)]="technology">
+
+<p>Name: {{username}}</p>
+<p>Age: {{age}}</p>
+<p>Salary: {{salary}}</p>
+<p>Technology: {{technology}}</p>
+
+<button type="button" [disabled]="username == ''" (click)="onResetInput()">Reset Input</button>
+</div>
+
+</div>
+</div>

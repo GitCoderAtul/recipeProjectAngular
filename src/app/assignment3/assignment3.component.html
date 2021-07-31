@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+
+<button type="button" class="btn btn-primary" (click)="displayDetail()">Display Details</button>
+<button type="button" class="btn btn-primary" (click)="toggleDetail()">Display Details Toggle</button>
+<span *ngIf="password">Secret Password = tune</span>
+<!-- <ng-template *ngIf="password">
+    <span >Secret Password = tune</span>
+</ng-template> -->
+<p *ngFor="let logItems of log; let i = index" 
+    [ngStyle]="{backgroundColor: i >= 3 ? 'blue' : 'transparent'}"
+    [ngClass]="{'white-text': i >= 3}">
+    {{logItems}}
+</p>
+
+</div>
+</div>
