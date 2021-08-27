@@ -4,7 +4,7 @@
     </div>
     <hr>
     <div class="list-group col-xs-12">
-        <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
+        <!-- <a href="#" class="list-group-item clearfix" *ngFor="let recipe of recipes">
             <div class="float-left">
                 <h4 class="list-group-item-heading">{{recipe.name}}</h4>
                 <p class="list-group-item-text">{{ recipe.decription }}</p>
@@ -12,7 +12,11 @@
             <span class="float-right">
                 <img [src]="recipe.imagePath" alt="" class="img-responsive" style="max-height:65px">
             </span>
-        </a>
-        <app-recipe-item></app-recipe-item>
+        </a> 
+    <app-recipe-item></app-recipe-item>
+    -->
+    <app-recipe-item *ngFor="let recipeEl of recipes"
+        [recipe]="recipeEl"
+        (recipeSelected)="onRecipeSelect(recipeEl)"></app-recipe-item>
 </div>
 

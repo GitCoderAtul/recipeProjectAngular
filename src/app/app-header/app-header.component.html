@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <!-- <li class="nav-item " [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/recipeProject']">Recipe Project   <span class="sr-only">(current)</span></a>
+        </li> -->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/splitapps']">Split Apps </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/mainAccount']">Main account </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/demoForm']">Forms </a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/reactiveForm']">Reactive Form </a>
+        </li>
+        <!-- <li ngbDropdown  class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Recipe
+          </a>
+          <div ngbDropdownMenu  class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem class="dropdown-item" (click)="onSelect('recipe')">Recipe List</a>
+            <a ngbDropdownItem class="dropdown-item" (click)="onSelect('shopping')">Shopping List</a>            
+            </div>
+          </li> -->
+          <li ngbDropdown  class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Recipe
+            </a>
+            <div ngbDropdownMenu routerLinkActive="active" class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a ngbDropdownItem routerLinkActive="active" [routerLink]="['/recipe']" class="dropdown-item"  >Recipe List</a>
+              <a ngbDropdownItem routerLinkActive="active" [routerLink]="['/shopping']" class="dropdown-item"  >Shopping List</a>            
+              </div>
+            </li>
+
+        <li ngbDropdown  class="nav-item dropdown">
+          <a ngbDropdownToggle class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div ngbDropdownMenu routerLinkActive="active" class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a ngbDropdownItem routerLinkActive="active" class="dropdown-item" [routerLink]="['/assignment2']" >assignment 2</a>
+            <a ngbDropdownItem routerLinkActive="active" class="dropdown-item" [routerLink]="['/assignment3']" >assignment 3</a>
+            <a ngbDropdownItem routerLinkActive="active" class="dropdown-item" [routerLink]="['/assignment4']" >assignment 4</a>
+            <a ngbDropdownItem routerLinkActive="active" class="dropdown-item" [routerLink]="['/assignment5']" >assignment 5</a>
+            <a ngbDropdownItem routerLinkActive="active" class="dropdown-item" [routerLink]="['/assignment6']" >assignment 6</a>
+            <div class="dropdown-divider"></div>
+            <a ngbDropdownItem class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+  <router-outlet></router-outlet>

@@ -1,0 +1,39 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h4>Template Driven Forms</h4>
+            <form (ngSubmit)="onSubmit()" #formData="ngForm">
+                <div class="form-group">
+                    <label for="email">Email Id</label>
+                    <input type="email" class="form-control" name="email" ngModel #email="ngModel" required>
+                </div>
+                <span *ngIf="!email.valid && email.touched" style="color:red">Enter Email Id</span>
+                <div class="form-group">
+                    <label for="drpSubscription">Subscription</label>
+                    <select name="subscription" class="form-control" [ngModel]="defaultSubscription" required>
+                        <option value="basic">Basic</option>
+                        <option value="advanced">Advanced</option>
+                        <option value="pro">Pro</option>
+                    </select>
+                </div>
+               
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" ngModel #password="ngModel" required>
+                    <span *ngIf="!password.valid && password.touched" style="color:red">Enter Password</span>
+                </div>
+               
+                <button class="btn btn-primary" (click)="onSubmit()" [disabled]="!formData.valid">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="row" *ngIf="submitted">
+        <div class="col-md-12">
+            <h5>User Data</h5>
+            <p>Email Id: {{userData.email}}</p>
+            <p>Subscription Status: {{userData.defaultSubscription}}</p>
+            <p>Password: {{userData.password}}</p>
+        </div>
+    </div>
+</div>
+
